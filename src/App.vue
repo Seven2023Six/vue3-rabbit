@@ -5,14 +5,9 @@ import { RouterView } from "vue-router";
 <template>
   <!-- 一级路由出口组件 -->
   <router-view></router-view>
-  <div class="test">Test Scss</div>
 </template>
 
 <style scoped lang="scss">
-.test {
-  color: $priceColor;
-}
-
 header {
   line-height: 1.5;
   max-height: 100vh;
