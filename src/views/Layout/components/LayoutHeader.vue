@@ -8,17 +8,17 @@ const categoryStore = useCategoryStore();
 <template>
   <header class="app-header">
     <div class="container">
-      
+
       <h1 class="logo">
         <RouterLink to="/">小兔鲜</RouterLink>
       </h1>
 
       <ul class="app-header-nav">
         <li class="home">
-          <RouterLink to="/">首页</RouterLink>
+          <RouterLink exact-active-class="active" to="/">首页</RouterLink>
         </li>
         <li class="home" v-for="item in categoryStore.categoryList" :key="item.id">
-          <RouterLink to="/">{{ item.name }}</RouterLink>
+          <RouterLink exact-active-class="active" :to="`/category/${item.id}`">{{ item.name }}</RouterLink>
         </li>
       </ul>
 
@@ -50,8 +50,7 @@ const categoryStore = useCategoryStore();
       height: 132px;
       width: 100%;
       text-indent: -9999px;
-      background: url("@/assets/images/logo.png") no-repeat center 18px /
-        contain;
+      background: url("@/assets/images/logo.png") no-repeat center 18px / contain;
     }
   }
 
